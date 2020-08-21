@@ -1,0 +1,32 @@
+utilisation des frameworks js cote front :
+
+	le package laravel/ui permet d'avoir les dependances
+	composer require laravel/ui
+
+	telechargement de base de scaffolding vue js
+	php artisan ui vue
+
+	telechargement avec les dependances de l'authentification
+	php artisan ui vue --auth
+
+	installer tout les dependances
+	npm install
+
+	compulation de l'application frontend
+	npm run dev
+	compulation automatique
+	npm run watch
+
+	installation du module vue-router
+	https://router.vuejs.org/installation.html
+	npm install vue-router
+
+	pour l'utiliser dans une pagen il faut tout simplement l'importer
+
+	import Vue from 'vue'
+	import VueRouter from 'vue-router'
+	Vue.use(VueRouter)
+
+	c'est deja fait par laravel dans app.
+
+
