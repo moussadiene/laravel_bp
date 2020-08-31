@@ -16,3 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/listeEntreprise/{rechercher?}','EntrepriseController@index');
+Route::post('/listeEntreprise','EntrepriseController@store');
+Route::get('/entreprises/edit/{id}','EntrepriseController@edit');
+Route::patch('/entreprises/edit/{id}','EntrepriseController@update');
+Route::delete('/entreprises/destroy/{id}','EntrepriseController@destroy');

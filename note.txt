@@ -12,6 +12,8 @@ utilisation des frameworks js cote front :
 	installer tout les dependances
 	npm install
 
+
+
 	compulation de l'application frontend
 	npm run dev
 	compulation automatique
@@ -29,4 +31,25 @@ utilisation des frameworks js cote front :
 
 	c'est deja fait par laravel dans app.
 
+
+creation de nouveau model
+    php artisan make:model Entreprise
+
+    pour migration
+    php artisan make:migration Entreprise
+
+    creation de nouveau model plus migrations
+    php artisan make:model Entreprise -m
+
+creation de controller
+
+    php artisan make:controller EntrepriseController -r
+        -r signifi avec les ressources en meme temps
+
+
+Creation de pagination pour nos page vuejs
+    installation
+    npm install laravel-vue-pagination
+    configuration :
+    dans app.js === Vue.component('pagination',require('laravel-vue-pagination'));
 

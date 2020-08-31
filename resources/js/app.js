@@ -10,12 +10,18 @@ window.Vue = require('vue');
 
 //importation du module vue-router
 import VueRouter from 'vue-router';
-
 //permetre vue d'utiliser les fonctionnalite de Vue-
 Vue.use(VueRouter);
 
+// les fonctionnalite de la pagination
+Vue.component('pagination', require('laravel-vue-pagination'));
+// recuperer et definir la vue add-entreprise
+Vue.component('add-entreprise', require('./components/entreprise/AddEntrepriseComponent.vue').default);
+Vue.component('edit-entreprise', require('./components/entreprise/EditEntrepriseComponent.vue').default);
+
 import Home from './components/HomeComponent.vue';
-import Entreprise from './components/EntrepriseComponent.vue';
+import Entreprise from './components/entreprise/EntrepriseComponent.vue';
+import Service from './components/service/ServiceComponent.vue';
 
 
 const routes = [
@@ -26,10 +32,14 @@ const routes = [
     {
         path : '/entreprise',
         component : Entreprise
+    },
+    {
+        path : '/service',
+        component : Service
     }
 ];
 
-const router = new VueRouter({routes})
+const router = new VueRouter({routes});
 
 const app = new Vue({
     el: '#app',
